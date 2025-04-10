@@ -1,0 +1,60 @@
+CSS (Cascading Style Sheets) is a stylesheet language used to design the webpage to make it attractive. 
+
+There are three types of CSS which are given below:
+- Inline CSS : within the same tag
+- Internal or Embedded CSS : in head tag
+- External CSS : in different file
+
+- We will see how to set the CSS units in different ways. 
+
+% – The % unit is used to set the font-size relative to the current font-size. 
+em – It is used to set the relative size. It is relative to the font-size of the element. 
+Note: Here 2em meaning 2times the size of current font. 
+rem – Relative to the browser base font-size. 
+px – It defines the font-size in terms of pixels. (96px = 1in)
+vh – Relative to 1% of the height of the viewport. 
+vw – Relative to 1% of the width of the viewport. 
+
+CSS Box MOdel : Refer to the image
+
+- Margin Collapse : When two margins from different elements overlap the equivalent margin is the greater of two margin, This is called margin collapse.
+
+- There are five different types of position property available in CSS:
+Fixed
+Static
+Relative
+Absolute
+Sticky
+
+- Mostly common color values are used below:
+RGB
+HFX colors
+HSL colors
+The CurrentColor Keyword
+
+Comment : Syntax: /* content */
+
+NOTE : READ ABOUT STACKING CONTEXT
+
+The media query in CSS is used to create a responsive web design to make a user-friendly website. It means that the view of web pages differs from system to system based on screen or media types. Media is allowing us to reshape and design the user view page of the website for specific devices like Tablets, Desktops, Mobile phones, etc.
+Syntax:
+
+@media not | only mediatype and (expression)
+{
+    // Code content
+}
+
+- Flexbox : It is also called a flexible box model. It is basically a layout model that provides an easy and clean way to arrange items within container. 
+Refer to https://www.geeksforgeeks.org/batch/js-yt/track/fullstack-bootcamp-css-flexbox-and-grid/article/NDQ1Mg%3D%3D
+
+- Grid Layout : The CSS grid layout module is used to create a grid-based layout system, with the help of rows and columns it makes it easier to design any webpage without using floats and positioning.
+
+- Pseudo Classes n Elements
+Refer to https://www.geeksforgeeks.org/batch/js-yt/track/fullstack-bootcamp-css-psuedo-classes-and-elements/article/NzI5OA%3D%3D
+
+- Transform property is used to change the coordinate space of the visual formatting model. This is used to add effects like skew, rotate, translate, etc on elements.
+
+- CSS Animations: technique to change the appearance and behavior of various elements in web pages. It is used to control the elements by changing their motions or display. It has two parts, one which contains the CSS properties which describe the animation of the elements and the other contains certain keyframes which indicate the animation properties of the element and the specific time intervals at which those have to occur. 
+
+Refer to
+https://www.geeksforgeeks.org/batch/js-yt/track/fullstack-bootcamp-transitions-animations/article/NDQ1MQ%3D%3D
