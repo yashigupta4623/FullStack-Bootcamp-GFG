@@ -1,0 +1,127 @@
+HTML stands for HyperText Markup Language, is the standard markup language used to create and design web pages. It forms the backbone of the World Wide Web, enabling the creation and formatting of documents that can be viewed on the internet by web browsers.HTML documents are comprised of a series of elements, which are enclosed within angle brackets, known as tags. These tags define the structure and content of the document.
+
+---
+
+EXAMPLE EXPLAINED -
+<!DOCTYPE html>: Defines the document as an HTML5 document.
+
+<html>: The root element of an HTML page.
+
+<head>: Contains meta information about the HTML page.
+
+<title>: Specifies the title of the HTML page displayed in the browser.
+
+<body>: Defines the document's body, containing all visible content.
+
+<h1>: Defines a large heading.
+
+<p>: Defines a paragraph.
+
+---
+
+FEATURES OF HTML
+- It is a very easy and simple language.
+- It is platform-independent.
+- It is a markup language.
+- Html is a case insensitive language <h1> and <H1> tag are same.
+
+---
+
+COMMENTS IN HTML:
+<!--HTML Content-->
+
+--- 
+
+IMPORTANT NOTES :
+- Head and body tags are children of html tag.
+- Html is the parent of head and body tags .
+- You can use .htm or .html extension to save the file.
+- You can use "inspect Element" or "view page source" option from chrome to look into website's html code.
+- HTML ELEMENT = Start tag + content + End tag.
+
+
+Types of Tags : 
+Empty - <tag_name> ...</tag_name> 
+Container - <tag_name>
+
+- The metadata means information about data. The <meta> tag in HTML provides information about HTML Document or in simple words, it provides important information about a document.
+
+Link :
+It is a connection from one web resource to another. A link has two ends, An anchor and direction.
+
+Page Layout :
+- Refer to the Img
+
+HTML tags are classified in two types. 
+- Semantic : have meaningful names which tells about type of content. For example header, footer, table.
+- Non-Semantic :Tags like div, span fall under this categories as their names don’t tell anything about what kind of content is present inside them.
+
+Block, Inline, and Inline-Block Elements:
+1. Block-level Elements: Always start on a new line. Take up the full width of their parent container by default. The height adjusts according to the content inside.
+Common examples: <div>, <p>, <h1> to <h6>, <section>, <article>.
+
+2. Inline Elements: Do not start on a new line; they flow with the surrounding text. Take up only as much width as needed by their content. You cannot set width or height on inline elements.
+Common examples: <span>, <a>, <strong>, <em>.
+
+3. Inline-block Elements: Behave like inline elements in that they do not start on a new line. But accept width and height properties like block elements. Useful for layout designs where elements should sit side by side, yet still respect box dimensions.
+Example: <img>, or a <div> styled with display: inline-block.
+
+Lists :
+Lists are used to store data or information in web pages in ordered or unordered form.
+- Unordered/bulleted list List
+- Ordered List
+- Description list
+
+eg of description list :
+
+`
+<html>
+<head>
+     <title>Description list</title>
+</head>
+<body>
+    <h2>Example of description list</h2>
+    <dl>
+        <dt>Python:</dt>
+        <dd>It is a programming language</dd>
+        <dt>C++:</dt>
+        <dd>It is also a programming language</dd>
+    </dl>
+    
+</body>
+</html>
+`
+
+Tables : 
+- tr tag: used to display table Row
+- td tag: used to display the table data
+- th tag: used in place of table data for displaying table headers.
+
+Note :
+To add a caption to the table ,we use <caption> tag inside table .
+- thead tag : used to wrap table head(caption and tr with th)
+- tbody tag: used to wrap the table body.
+
+-Colspan attribute
+This attribute is used to create cells spanning multiple columns
+- Rowspan Attribute
+The value of the rowspan attribute represents the number of rows to span.
+
+Forms : 
+- HTML forms are used to collect user input and send it to a server.
+- Created using the <form> tag.
+- Common input elements inside forms:
+<input> – for text, email, password, etc.
+<textarea> – for multiline text.
+<select> and <option> – for dropdown menus.
+<button> or <input type="submit"> – to submit the form.
+
+iframe : 
+- The <iframe> tag is used to embed another HTML page or external content (like a video, map, or website) within the current page.
+- Acts like a window inside a webpage.
+
+<fieldset> Tag:
+The <fieldset> tag is used to group related form elements together. It helps improve form organization and accessibility.
+- Paired with <legend>: <legend> is used inside <fieldset> to add a caption/title for the group. The legend tag is used to define the title for the child contents. The legend elements are the parent element. This tag is used to define the caption for the <fieldset> element.
+
+- Video tag is used to play videos in HTML. Autoplay/Loop: We can use autoplay/loop to autoplay or loop the video. Width: to adjust width of a video (Height automatically adjusts )
