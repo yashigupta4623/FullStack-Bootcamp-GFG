@@ -1,0 +1,234 @@
+The console.log() is a function in JavaScript that is used to print any kind of variables defined before in it or to just print any message that needs to be displayed to the user.
+
+A variable is a named placeholder that holds data or information. Three main ways to declare variables in JavaScript: var, let, and const.
+
+- Why Use let and const over var?
+Block Scoping : let and const are block-scoped, meaning they are only accessible within the block they are defined. var is function-scoped, which can lead to unexpected behavior.(IMPT)
+Re-assignment : const ensures that variables cannot be reassigned
+
+JavaScript is a powerful and flexible language used for both client-side and server-side programming. 
+
+Types of DataTypes :
+- String: Text enclosed in quotes.
+- Number: Integers or floating-point numbers.
+- Boolean: True or false values.
+- Undefined: Variables declared but not assigned a value.
+- Null: Represents "no value."
+- Object: Non-primitive type for storing collections of data.
+- Array: A special type of object for storing lists of values.
+
+- Conversion Rules
+Any non-empty string is true.
+An empty string is false.
+The number 0 is false.
+Any other number is true.
+
+- Comparsion :
+Type Coercion in Comparison
+`console.log("2" > 1);   // true
+console.log("01" == 1); // true `
+
+-- Strict Equality (===) vs. Loose Equality (==)
+Loose Equality (==): Converts the values before comparing them.
+Strict Equality (===): Checks both the value and the type.
+`console.log("01" === 1); // false `
+
+Null and Undefined in Comparison
+` console.log(null == undefined);  // true
+console.log(null === undefined); // false `
+
+Null in Mathematical Comparisons : null has unique behavior when used in mathematical comparisons (such as <, >, <=, >=). In these comparisons, null is treated as 0.
+
+- Ternary Operators: 
+condition ? expressionIfTrue : expressionIfFalse
+
+- Nullish Coalescing (??): 
+` let result = a ?? b; ` : If a is not null or undefined, result is a. If a is null or undefined, result is b.
+
+- Difference Between ?? and || :
+OR operator returns the first truthy value in an expression. It will treat values like 0, "" (empty string), null, and undefined as falsy values. nullish coalescing operator will only return the fallback value if the variable is null or undefined. It will not return the fallback value for falsy values like 0 or "".
+
+Loops : For-Loop, While Loop, Do-While Loop
+
+Function : is a set of statements that take inputs, do some specific computation, and produces output. Basically, a function is a set of statements that perform some tasks or computations and returns the result to the user.
+
+Syntax:
+
+function functionName(Parameter1, Parameter2, ..)
+{
+    // Function body
+}
+
+- Anonymous functions in JavaScript are functions without a name or identity. They are often used when a function is only needed once or as an argument to other functions. This can be useful in various scenarios, such as callbacks, event handlers, or immediately invoked function expressions (IIFE)(An IIFE is a function that is executed immediately after it is defined. This is often used to create a new scope to avoid polluting the global scope.)
+
+Array :
+- arr.pop() : remove the last element.
+- arr.shift() : removes first element.
+- arr.splice(1,1) : for slicing
+
+- Array Methods:
+map : Creates a new array with the results of calling a function for every array element
+filter : Creates a new array with elements that pass a test provided by a function
+Reduce : It is used to reduce the array into one single value using some functional logic
+
+Shallow Copy : changing the inner part in the copy also changes it in the original.
+Deep Copy : changing one doesn’t affect the other.
+
+- this keywords : this references the object that is currently calling the function.
+
+- Function Context : In JavaScript, you can invoke a function in the following ways:
+Function invocation
+Method invocation
+Constructor invocation
+Indirect invocation
+
+- Bind : The bind() method creates a new function where this keyword refers to the parameter in the parenthesis
+
+- What is a Pure Function?
+A pure function in JavaScript:
+Accepts inputs and returns a value.
+Does not rely on or modify external state.
+Always produces the same output for the same input.
+
+- First-Class Function
+In JavaScript, functions are treated as "first-class citizens." But what does this mean? It means that functions in JavaScript have the same status as other data types like strings, numbers, or objects. Functions can be:
+Assigned to variables
+Passed as arguments to other functions
+Returned from other functions
+
+- First-class functions are the foundation of many powerful programming patterns in JavaScript, such as:
+
+Callbacks: Functions passed as arguments to be executed later.
+Closures: Functions that capture and remember their lexical environment.
+Higher-Order Functions: Functions that return other functions or take functions as arguments.
+
+-   A higher-order function is a function that does at least one of the following:
+Takes one or more functions as arguments.
+Returns a function as a result.
+
+- Types of Scopes in JavaScript: 
+Block scope
+Function scope
+Local scope
+Global scope
+
+Hoisting in JavaScript is JavaScript’s default behavior of moving declarations (not initializations) to the top of their scope before code execution.
+
+> So you can use functions and variables before they are declared — but only in certain cases!
+
+ `var` is hoisted and initialized as `undefined`
+
+console.log(a); // undefined
+var a = 10;
+
+ `let` and `const` are hoisted too, but not initialized.  
+They stay in a "temporal dead zone" until the line they're declared.
+
+console.log(b); // ❌ ReferenceError
+let b = 20;
+
+console.log(c); // ❌ ReferenceError
+const c = 30;
+
+Note: JavaScript only hoists declarations, not the initializations.
+
+Closure : A closure is when a function remembers variables from the place where it was created — even after that outer function has finished running.
+
+` function outer() {
+  let count = 0;
+
+  return function inner() {
+    count++;
+    console.log(count);
+  };
+}
+
+const counter = outer();
+counter(); // 1
+counter(); // 2
+`
+
+Even though outer() is done, inner() still has access to count — that's a closure!
+
+- Use Casesof Closure:
+Data privacy (like private variables)
+Function factories
+Event handlers
+
+- Document Object Model or DOM : represents the HTML structure of a webpage in a tree-like format, where each node corresponds to an element in the document. This structure allows programming languages like JavaScript to interact with the document in a structured way, manipulating elements, attributes, and content.
+
+- The creation of the DOM follows a specific process during the page load:
+
+HTML Loading: The browser first loads the HTML document.
+HTML Parsing: As the browser loads the HTML, it begins parsing it from top to bottom.
+DOM Tree Creation: During parsing, the browser constructs the DOM tree. This tree represents the hierarchical structure of the HTML document.
+
+- HTML DOM getElementByID() Method 
+- DOM querySelectorAll() Method
+- addEventListener() : element.addEventListener(event, listener, useCapture);
+- Event bubbling is a method of event propagation in the HTML DOM API when an event is in an element inside another element, and both elements have registered a handle to that event. 
+- Event delegation is a technique where you add a single event listener to a parent element instead of adding multiple event listeners to each child element.
+
+How JS works ? https://www.geeksforgeeks.org/batch/js-yt/track/fullstack-bootcamp-bonus-js-concept/article/NjU3NQ%3D%3D
+
+- There are three types of scopes available in JavaScript: Global Scope, Local / Function Scope, and Block Scope.
+
+Js is (asynchronous & synchronous) & single-threaded language.
+
+How asynchronous Js works? Functions or operations that are running in parallel with the other functions or operations are called the asynchronous functions or operations in JavaScript. Asynchronous functions use Callback Functions that get executed later.
+
+The JavaScript code gets executed by a Call Stack and as the Call Stack does not contain anything like a timer, we cannot delay the code execution. Therefore, for performing an asynchronous operations, we use the help of a web API setTimeout() which is available in the window global object in the browser.
+
+Interestingly setTimeout is not a part of JavaScript, it is one of the many web APIs (Eg: setTImeout, DOM APIs, fetch, LocalStorage, console, location etc.) that are available in the global object of the browser. Browsers give the JavaScript engine the ability to access these web APIs through this global object. And, because window is a global object we can access the web APIs without the window keyword.
+
+Callback : Callbacks are a great way to handle something after something else has been completed. By something here we mean a function execution. If we want to execute a function right after the return of some other function, then callbacks can be used. 
+
+Callbacks are primarily used while handling asynchronous operations like - making an API request to the Google Maps, fetching/writing some data from/into a file, registering event listeners and related stuff. All the operations mentioned uses callbacks. This way once the data/error from the asynchronous operation is returned, the callbacks are used to do something with that inside our code.
+
+Promise : are used to handle asynchronous operations in JavaScript. They are easy to manage when dealing with multiple asynchronous operations where callbacks can create callback hell leading to unmanageable code.
+Multiple callback functions would create callback hell that leads to unmanageable code. 
+Promises are the ideal choice for handling multiple callbacks at the same time, thus avoiding the undesired callback hell situation. Promises do provide a better chance to a user to read the code in a more effective and efficient manner especially it that particular code is used for implementing multiple asynchronous operations. 
+
+- Benefits of Promises 
+Improves Code Readability
+Better handling of asynchronous operations
+Better flow of control definition in asynchronous logic
+Better Error Handling
+
+- A Promise has four states: 
+fulfilled: Action related to the promise succeeded
+rejected: Action related to the promise failed
+pending: Promise is still pending i.e. not fulfilled or rejected yet
+settled: Promise has fulfilled or rejected
+
+Eg:
+`var promise = new Promise(function(resolve, reject) { 
+  const x = "Geeksforgeeks"; 
+  const y = "geeksforgeeks"
+  if(x === y) { 
+    resolve(); 
+  } else { 
+    reject(); 
+  } 
+}); 
+  
+promise. 
+    then(function () { 
+        console.log('Success, You are a GEEK'); 
+    }). 
+    catch(function () { 
+        console.log('Some error has occurred'); 
+    });
+`
+
+- Applications :
+Promises are used for asynchronous handling of events.
+Promises are used to handle asynchronous http requests.
+
+Async/Await Function : is the extension of promises which we get as a support in the language. 
+
+Async:
+It simply allows us to write promises based code as if it was synchronous and it checks that we are not breaking the execution thread. It operates asynchronously via the event-loop. Async functions will always return a value. It makes sure that a promise is returned and if it is not returned then javascript automatically wraps it in a promise which is resolved with its value.
+
+Await:
+Await function is used to wait for the promise. It could be used within the async block only. It makes the code wait until the promise returns a result. It only makes the async block wait.
