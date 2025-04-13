@@ -1,0 +1,108 @@
+ReactJS is a popular open-source JavaScript library used for building fast and interactive user interfaces, especially single-page applications. Developed by Facebook, it follows a component-based architecture and uses a virtual DOM for efficient rendering. React allows developers to create reusable UI components and manage dynamic data with features like JSX, props, state, and hooks.
+
+Life Cycle of Components :
+
+A React Component can go through four stages of its life as follows. 
+- Initialization: This is the stage where the component is constructed with the given Props and default state. This is done in the constructor of a Component Class.
+- Mounting: Mounting is the stage of rendering the JSX returned by the render method itself.
+- Updating: Updating is the stage when the state of a component is updated and the application is repainted.
+- Unmounting: As the name suggests Unmounting is the final step of the component lifecycle where the component is removed from the page.
+
+Refer to lifecycle.png img
+
+- How to create an event in React?
+`import React from 'react';
+
+function App() {
+  function eventHandler(){
+    alert('Geeksforgeeks is the best platform to learn coding!');
+  }
+
+
+  return (
+    <div className='App'>
+      <h1>Welcome to Geeksforgeeks</h1>
+      <button onClick={eventHandler}>Click for alert!</button>
+    </div>
+  );
+}
+
+export default App;
+`
+
+- How to use events in reactJs?
+
+In DOM:
+<button onclick="printValues()">
+  Print
+</button>
+
+In React: 
+<button onClick={printValues}>
+  Print
+</button>
+
+Hooks : **Hooks** in React are special functions that allow you to use features like **state management**, **lifecycle methods**, and **context** inside functional components without writing a class. Common hooks include `useState` for state, `useEffect` for side effects, `useContext` for accessing context, `useRef` for referencing DOM elements or storing mutable values, `useReducer` for complex state logic, `useMemo` for optimizing performance by memoizing values, and `useCallback` for memoizing functions. Hooks make React code cleaner and more reusable.
+
+useState hook : useState is a React Hook that lets you add a state variable to your component.
+
+props : Props (short for properties) are read-only inputs passed from a parent component to a child component in React. They allow data to flow from parent to child, enabling dynamic rendering based on passed values.
+
+- Each child in an array or iterator should have a unique "key" prop. A “key” is a special string attribute you need to include when creating lists of elements in React.
+
+useRef hook : The useRef is a hook that allows to directly create a reference to the DOM element in the functional component.
+
+- useEffect hook : Refer to https://www.geeksforgeeks.org/batch/js-yt/track/fullstack-bootcamp-useeffect-hook-react/article/NDU4Nw%3D%3D
+an array of variables (props or state) which are observed by the hook. The effect only executes if one or more of the dependencies change.
+No Dependency array means the effect will execute on every rerender of the component i.e. whenever any of the props or state changes.
+Empty Dependency Array means the effect only runs on the first render of a component.
+
+- Connection to Backend : Axios
+In React communicating with the backend server is done via HTTP protocol. If you're a developer, then you might have been familiar with the XML Http Request interface and Fetch API. It allows you to fetch data and make HTTP requests.  
+
+This one is the common method to communicate with the database in React. In React there is another method to communicate with the backend server and that requires the installation of a popular library Axios.
+
+- Introduction to Axios: Axios, which is a popular library is mainly used to send asynchronous HTTP requests to REST endpoints. This library is very useful to perform CRUD operations.
+
+- Need of Axios in React: As we have discussed that Axios allows you to communicate with the APIs in your React project. The same tasks can also be performed by using AJAX, but Axios provide you more functionality and features and that helps you in building your application quickly. 
+
+Axios is a promise-based library, so you need to implement some promise-based asynchronous HTTP requests. jQuery and AJAX also perform the same job but in React project React handles each and everything in its own virtual DOM, so there is no need to use jQuery at all. 
+
+For GET, POST req & more info about Axios : https://www.geeksforgeeks.org/batch/js-yt/track/fullstack-bootcamp-fetching-data-using-axios/article/NzI0Nw%3D%3D
+
+- Error Object: You will get an error object if there will be a problem with the request. Promise will be rejected with an error object with the properties given
+
+message: Error message text. 
+response: Response object (if received). 
+request: Actual XMLHttpRequest object (when running in a browser). 
+config: Original request configuration. 
+
+- Features of Axios Library
+
+JSON data is transformed automatically.
+It transforms the request and response data.
+Useful in making HTTP requests from Node.js
+It makes XMLHttpRequests from the browser.
+Provide client-side support for protecting against XSRF.
+Supports promise API.
+Ability to cancel the request.
+
+- useContext : is a React Hook that lets you read and accept a context. Basic Application : Chnaging Theme
+
+Context : Context lets the information be passed to the desired component without dragging it through multiple middle components and also when the same information is required by various components. It makes the parent component let certain information be available to any component in the component tree below it, without the use of repeated props.
+The disadvantage of only passing props is that, in situations where the user would want two components' state to change together and to do that the user will have to remove state from both of them, move it to their closest common parent, and then pass it down to them via props. But the closest common parent could be far away from the component, in the tree, that needs data. So lifting the state up that high could lead to a condition known as prop drilling.
+
+- useReducer :  an alternative to useState hook and used to manage the states of the application. The state reducer pattern enables us to properly manage our state’s updates based on criteria that the user provides
+
+useReducer accepts two arguments :
+Reducer : is a pure function that takes in a current state and objects returning what the user did, called actions and returns a new state.
+Initial state : is the value that the user has provided in the initial phase of the state
+
+And returns the following :
+Current state : represents the current state.
+Dispatch : is a function used to update the state by calling the action object.
+
+- useMemo : is a hook used in the functional component of react that returns a memoized value.
+Note: Memorization is never free, we are trading space for time. 
+
+- useCallback : is used when you have a component in which the child is rerendering again and again without need.
